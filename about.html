@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name=
+      "viewport" content="width=device-width, initial-scale=1.0">
+    <meta name
+      ="description" content="">
+    <meta name="author" content="">
+    <title>
+      Konnektid
+    </title>
+    <link rel="icon" href="/imgs/favicon.ico" type=
+      "image/x-icon">
+    <link rel="shortcut icon" href="/imgs/favicon.ico" 
+      type="image/x-icon">
+    <link href=
+      "http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link href=
+      "http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.mi
+      n.css" rel="stylesheet">
+    <link rel="stylesheet" href=
+      "/css/konnektid-web.css">
+    <!-- -[if IE]<link rel="stylesheet" 
+      href="/css/ie.css">--><script src="/js/vendors/mixpanel.js"
+      ></script>
+  </head>
+  <body data-env="production">
+    <div id="page-wrapper"
+      >
+      <div id="nofooter-wrapper">
+        <div id="flash"></div>
+        <header class=
+          "green-texture">
+          <nav role="navigation" class="navbar navbar-default 
+            navbar-static-top">
+            <div class="navbar-header">
+              <a href="/" class=
+                "navbar-brand"><img src="/imgs/konnektid-logo.png"></a>
+              <div class=
+                "beta-img"><img src="//static.konnektid.com/images/Beta_button.png" 
+                alt="beta" class="img-responsive"></div>
+            </div>
+            <div class="follows"><a
+              href="http://www.facebook.com/konnektid" title="Like us on Facebook"
+              class="facebooklike"></a><a href="https://twitter.com/konnektid" 
+              title="Follow us on Twitter" class="twitterfollow"></a><a href=
+              "https://plus.google.com/+Konnektid" title="+1 us on Google Plus" 
+              class="googleplus"></a></div>
+          </nav>
+        </header>
+        <div class="wrapper">
+          <div
+            id="feedback-btn"><a href="#">Feedback</a></div>
+          <div id=
+            "feedback-modal" tabindex="-1" role="dialog" data-bind=
+            "with:feedbackViewModel" class="modal fade">
+            <div class="modal-dialog"
+              >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type=
+                    "button" data-dismiss="modal" aria-hidden="true" class="close">
+                  &times;</button>
+                  <h4 class="modal-title">Send us your feedback</h4>
+                </div>
+                <div data-bind="visible:mode() === 'form'" class=
+                  "modal-body">
+                  <form role="form" class="form-horizontal feedback-form"
+                    >
+                    <div class="form-group">
+                      <label for="feedback-name" class=
+                        "control-label col-sm-2">Full name:</label>
+                      <div class="col-sm-10"
+                        ><input id="feedback-name" name="fullname" type="text" placeholder=
+                        "Your name" data-bind="value:name" class="form-control"
+                        ></div>
+                    </div>
+                    <div class="form-group">
+                      <label for="feedback-email" 
+                        class="control-label col-sm-2">Email:</label>
+                      <div class="col-sm-10"
+                        ><input id="feedback-email" name="email" type="email" placeholder=
+                        "Your email" data-bind="value:email" class="form-control"
+                        ></div>
+                    </div>
+                    <div class="form-group">
+                      <label for="feedback-message" 
+                        class="control-label col-sm-2">Feedback:</label>
+                      <div class=
+                        "col-sm-10"><textarea id="feedback-message" name="message" rows="3" 
+                        placeholder="Bring it on! :)" data-bind="value:message" class=
+                        "form-control"></textarea></div>
+                    </div>
+                    <div class="form-group row"
+                      >
+                      <div class="col-sm-12"><button data-bind="click:sendFeedback" class=
+                        "btn btn-lg btn-primary pull-right">Send feedback
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div data-bind="visible:mode() === 
+                  'greetings'" class="modal-body">
+                  <h4>Thanks for your feedback.</h4>
+                  <p>
+                    We'll get back to you as soon as possible! Meanwhile follow us on <a 
+                      href="http://www.facebook.com/konnektid">Facebook</a> and <a href=
+                      "http://www.twitter.com/konnektid">Twitter</a>.
+                  </p>
+                </div>
+                <div 
+                  data-bind="visible:mode() === 'error'" class="modal-body">
+                  <h4>Oops, 
+                    sorry! Something went wrong.
+                  </h4>
+                  <p class="error">Please send us an 
+                    email at support @ konnektid.com, so we can take care of your 
+                    feedback.
+                  </p>
+                  <p class="error">Follow us on <a href=
+                    "http://www.facebook.com/konnektid">Facebook</a> and <a href=
+                    "http://www.twitter.com/konnektid">Twitter</a> to get updates about 
+                    all our progress.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container 
+            textured gray">
+            <h3>About Konnekt<em>id</em></h3>
+            <p>What do you want 
+              to learn? What can you teach someone? That's what we would like to 
+              know at Konnekt<em>id</em>. By connecting yourself to people you 
+              don't know yet but who can teach you something, you are helping each 
+              other develop and you will get to know who is nearby. We'll enable 
+              you to discover the social capital around you.
+            </p>
+            <h3>The Team</h3>
+            <p>Konnekt<em>id</em> is developed by Simone Potenza and Michel 
+              Visser. We are a small team, but we want to grow. Within the coming 
+              years we want to be known as the application for finding knowledge 
+              and skills in your immediate vicinity. Help yourself and others 
+              develop and get things done. Konnekt<em>id</em> is innovative. We 
+              want to surprise our users with a smart application. Together with 
+              VU Amsterdam we can build a smart algorithm.
+            </p>
+            <h3>Contact us</h3>
+            <p>Are you curious or do you want to receive further 
+              information? <br/> Please contact us at info @ konnektid.com
+            </p>
+            <h3>
+              Partners
+            </h3>
+            <div class="row">
+              <div class="col-sm-2">
+                <p><img src=
+                  "//static.konnektid.com/images/blog/stichting-doen.jpg" width="80%"
+                  ></p>
+              </div>
+              <div class="col-sm-10">
+                <p>Stichting Doen supports Konnekt
+                  <em>id</em> because we facilitate easy and smart encounters nearby.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <p><img src=
+                  "//static.konnektid.com/images/blog/Agentschapnl.jpg" width="80%"
+                  ></p>
+              </div>
+              <div class="col-sm-10">
+                <p>AgentschapNL supports the 
+                  technical innovation of Konnekt<em>id</em>
+                </p>
+              </div>
+            </div>
+            <div class=
+              "row">
+              <div class="col-sm-2">
+                <p><img src=
+                  "//static.konnektid.com/images/blog/vu.jpg" width="80%"
+                  ></p>
+              </div>
+              <div class="col-sm-10">
+                <p>Together with the Free 
+                  University (VU) Amsterdam we are creating smart matching algorithms.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="push"></div>
+      </div>
+      <div id=
+        "footer">
+        <div id="contact-modal" tabindex="-1" role="dialog" class=
+          "modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content"
+              >
+              <div class="modal-header">
+                <button type="button" data-dismiss="modal"
+                  aria-hidden="true" class="close">&times;</button>
+                <h4 class=
+                  "modal-title">Contact</h4>
+              </div>
+              <div class="modal-body">
+                <p>Are you 
+                  curious or do you want to receive further information?
+                </p>
+                <p>Please 
+                  contact us at info @ konnektid.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer
+          class="footer">
+          <div class="no-margin">
+            <div class="row">
+              <ul class=
+                "nav nav-pills">
+                <li><a href="http://konnektid.tumblr.com/" target=
+                  "_blank">Blog</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href=
+                  "/events">For events</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a 
+                  href="/privacy">Privacy</a></li>
+                <li><a href="#" data-toggle="modal" 
+                  data-target="#contact-modal">Contact</a></li>
+              </ul>
+            </div>
+            <p><small 
+              class="copywrite">Copyright &copy; 2014 Konnektid.com
+              </small>
+            </p>
+          </div>
+        </footer>
+      </div>
+      <script data-main="/js/page.js" src=
+        "/js/vendors/requirejs.2.1.9.min.js"></script><!--[if lte IE 
+        8]><script src="/js/libs/oldie.js"></script><![endif]-->
+    </div>
+  </body>
+</html>
